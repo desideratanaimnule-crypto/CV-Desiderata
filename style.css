@@ -1,8 +1,5 @@
 
-/* =========================================
-   PENGATURAN DASAR
-========================================= */
-
+/* ===== PENGATURAN DASAR ===== */
 * {
     box-sizing: border-box;
 }
@@ -23,10 +20,7 @@ body {
     background-color: #ffffff;
 }
 
-/* =========================================
-   JUDUL DAN PARAGRAF
-========================================= */
-
+/* ===== JUDUL DAN PARAGRAF ===== */
 h1 {
     color: darkcyan;
     text-align: left;
@@ -46,10 +40,7 @@ p {
     overflow-wrap: break-word;
 }
 
-/* =========================================
-   FOTO DAN IDENTITAS
-========================================= */
-
+/* ===== FOTO DAN IDENTITAS ===== */
 .identitas {
     width: 100%;
     border-collapse: collapse;
@@ -74,52 +65,40 @@ p {
     padding: 5px;
 }
 
-/* Tabel data identitas */
-table.data-identitas {
+.data-identitas {
     width: 100%;
     border-collapse: collapse;
-    table-layout: fixed;
+    table-layout: auto;
 }
 
 .data-identitas td {
-    padding: 7px 5px;
+    padding: 5px;
+    text-align: left;
+    vertical-align: top;
     font-size: 14px;
     line-height: 1.5;
-    vertical-align: top;
-    text-align: left;
-    overflow-wrap: break-word;
 }
 
-/* Kolom label */
 .data-identitas td:first-child {
     width: 40%;
 }
 
-/* Kolom titik dua */
 .data-identitas td:nth-child(2) {
     width: 18px;
     text-align: center;
 }
 
-/* Kolom isi */
 .data-identitas td:nth-child(3) {
-    width: auto;
     overflow-wrap: anywhere;
 }
 
-/* =========================================
-   DAFTAR
-========================================= */
-
+/* ===== DAFTAR ===== */
 ul,
 ol {
     line-height: 1.8;
 }
 
-/* =========================================
-   TABEL MATA KULIAH
-========================================= */
-
+/* ===== TABEL MATA KULIAH ===== */
 .tabel-mata-kuliah {
     width: 100%;
     border-collapse: collapse;
@@ -139,10 +118,7 @@ ol {
     border: 1px solid #cccccc;
 }
 
-/* =========================================
-   TAUTAN
-========================================= */
-
+/* ===== TAUTAN ===== */
 a {
     color: #0066cc;
     text-decoration: none;
@@ -153,10 +129,7 @@ a:hover {
     text-decoration: underline;
 }
 
-/* =========================================
-   FORMULIR KONTAK
-========================================= */
-
+/* ===== FORMULIR ===== */
 form {
     background-color: #fff7fa;
     padding: 25px;
@@ -178,7 +151,6 @@ textarea {
     max-width: 100%;
     padding: 10px;
     border: 1px solid #cccccc;
-    border-radius: 4px;
     font-family: Arial, sans-serif;
     font-size: 16px;
     margin-bottom: 12px;
@@ -186,7 +158,6 @@ textarea {
 
 textarea {
     resize: vertical;
-    min-height: 100px;
 }
 
 button {
@@ -194,7 +165,6 @@ button {
     color: white;
     padding: 10px 20px;
     border: none;
-    border-radius: 4px;
     margin-right: 10px;
     cursor: pointer;
 }
@@ -203,10 +173,14 @@ button:hover {
     background-color: #003366;
 }
 
-/* =========================================
-   KARTU INFORMASI
-========================================= */
+/* ===== FOOTER ===== */
+.footer {
+    text-align: center;
+    color: #666666;
+    margin-top: 30px;
+}
 
+/* ===== KARTU INFORMASI ===== */
 .grid-informasi {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -223,22 +197,12 @@ button:hover {
     overflow-wrap: break-word;
 }
 
-.footer {
-    text-align: center;
-    color: #666666;
-    margin-top: 30px;
-}
-
-/* =========================================
-   TABLET DAN HP
-========================================= */
-
+/* ===== RESPONSIF TABLET DAN HP ===== */
 @media screen and (max-width: 768px) {
-
     .container {
         width: 94%;
-        margin: 12px auto;
-        padding: 18px;
+        margin: 10px auto;
+        padding: 15px;
     }
 
     h1 {
@@ -254,7 +218,7 @@ button:hover {
         line-height: 1.6;
     }
 
-    /* Foto dan identitas tersusun ke bawah */
+    /* Foto di atas, identitas di bawah */
     .identitas {
         width: 100%;
     }
@@ -287,21 +251,18 @@ button:hover {
 
     .foto-profil {
         width: 130px;
-        max-width: 100%;
-        height: auto;
         margin: 0 auto;
     }
 
-    /* Identitas tetap sejajar dalam tiga kolom */
-    table.data-identitas {
+    /* Identitas tetap sejajar */
+    .data-identitas {
         width: 100%;
         table-layout: fixed;
     }
 
     .data-identitas td {
-        padding: 7px 3px;
+        padding: 5px 3px;
         font-size: 13px;
-        line-height: 1.5;
         vertical-align: top;
     }
 
@@ -311,17 +272,15 @@ button:hover {
 
     .data-identitas td:nth-child(2) {
         width: 16px;
-        text-align: center;
     }
 
     .data-identitas td:nth-child(3) {
-        width: auto;
         overflow-wrap: anywhere;
     }
 
     /* Kartu menjadi satu kolom */
     .grid-informasi {
-        grid-template-columns: minmax(0, 1fr);
+        grid-template-columns: 1fr;
         gap: 15px;
     }
 
@@ -330,7 +289,6 @@ button:hover {
         padding: 15px;
     }
 
-    /* Tabel mata kuliah dapat digeser bila lebar */
     .tabel-mata-kuliah {
         font-size: 12px;
     }
@@ -357,19 +315,15 @@ button:hover {
     }
 }
 
-/* =========================================
-   HP KECIL
-========================================= */
-
+/* ===== HP DENGAN LAYAR KECIL ===== */
 @media screen and (max-width: 380px) {
-
     .container {
         width: 96%;
         padding: 12px;
     }
 
     .data-identitas td {
-        padding: 6px 2px;
+        padding: 5px 2px;
         font-size: 12px;
     }
 
