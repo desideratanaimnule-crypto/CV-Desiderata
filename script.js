@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
             "?text=" +
             encodeURIComponent(isiPesan);
 
-        // Tautan universal untuk HP maupun komputer
+        // Membuka tautan WhatsApp dengan pesan yang sudah disiapkan
         window.location.assign(urlWhatsApp);
     });
 });
