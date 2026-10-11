@@ -1,50 +1,46 @@
 
-<script>
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("formkontak");
-    if (!form) return;
+
+    if (!form) {
+        console.error("Form kontak tidak ditemukan.");
+        return;
+    }
 
     form.addEventListener("submit", function (event) {
         event.preventDefault();
 
+        // Nomor WhatsApp tujuan, gunakan kode negara 62
         const nomorWhatsApp = "6281353611102";
-        const nama = document.getElementById("nama").value.trim();
-        const email = document.getElementById("email").value.trim();
-        const telepon = document.getElementById("telepon").value.trim();
-        const minat = document.getElementById("minat").value;
-        const pesan = document.getElementById("pesan").value.trim();
+
+        const nama = form.querySelector('[name="nama"]').value.trim();
+        const email = form.querySelector('[name="email"]').value.trim();
+        const telepon = form.querySelector('[name="telepon"]').value.trim();
+        const minat = form.querySelector('[name="minat"]').value;
+        const pesan = form.querySelector('[name="pesan"]').value.trim();
 
         if (!nama || !email || !telepon || !minat || !pesan) {
             alert("Silakan lengkapi semua kolom formulir.");
             return;
         }
 
-        const isiPesan =
-            "Halo, saya menghubungi melalui website CV.\n\n" +
-            "Nama Lengkap: " + nama + "\n" +
-            "Email: " + email + "\n" +
-            "No. Telepon: " + telepon + "\n" +
-            "Bidang Minat: " + minat + "\n" +
-            "Pesan: " + pesan;
+        const isiPesan = [
+            "Halo, saya menghubungi melalui website CV.",
+            "",
+            "Nama Lengkap: " + nama,
+            "Email: " + email,
+            "No. Telepon: " + telepon,
+            "Bidang Minat: " + minat,
+            "Pesan: " + pesan
+        ].join("\n");
 
-        const teks = encodeURIComponent(isiPesan);
-        const isHP = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+        const urlWhatsApp =
+            "https://wa.me/" +
+            nomorWhatsApp +
+            "?text=" +
+            encodeURIComponent(isiPesan);
 
-        if (isHP) {
-            // Mencoba membuka aplikasi WhatsApp di HP
-            window.location.href =
-                "whatsapp://send?phone=" + nomorWhatsApp +
-                "&text=" + teks;
-        } else {
-            // Membuka WhatsApp Web di komputer
-            window.open(
-                "https://web.whatsapp.com/send?phone=" +
-                nomorWhatsApp + "&text=" + teks,
-                "_blank"
-            );
-        }
+        // Tautan universal untuk HP maupun komputer
+        window.location.assign(urlWhatsApp);
     });
 });
-</script>
-</body>
-</html>
