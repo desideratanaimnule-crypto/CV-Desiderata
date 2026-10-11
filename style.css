@@ -1,225 +1,387 @@
+
+/* =========================================
+   PENGATURAN DASAR
+========================================= */
+
 * {
-	box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-body{
-	background-color: #6B1E2B;
-	font-family: Arial, sans-serif;
-	color: #000000;
-	margin: 0;
-	padding: 0;
+body {
+    background-color: #6B1E2B;
+    font-family: Arial, sans-serif;
+    color: #000000;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
-	width: 80%;
-	margin: 30px auto;
-	padding: 30px;
-	background-color: white;
+    width: 80%;
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: #ffffff;
 }
+
+/* =========================================
+   JUDUL DAN PARAGRAF
+========================================= */
 
 h1 {
-	color: darkcyan;
-	text-align: left;
-	margin-bottom: 20px;
-}
-h2 {
-	color: darkred;
-	margin-top: 30px;
-	margin-bottom: 15px;
-}
-p {
-	font-size: 16px;
-	line-height: 1.7;
-	text-align: justify;
-}
-.identitas {
-	width: auto;
-}
-.kolom-foto {
-	vertical-align: top;
-	padding-right: 0px;
-}
-.kolom-identitas {
-	vertical-align: top;
-}
-.foto-profil {
-	width: 200px;
-	border: 3px solid #00509e;
-	padding: 5px;
-}
-.data-identitas td {
-	padding: 5px;
+    color: darkcyan;
+    text-align: left;
+    margin-bottom: 20px;
 }
 
-/*===================================================*/
-/*LIST*/
-/*===================================================*/
+h2 {
+    color: darkred;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.7;
+    text-align: justify;
+    overflow-wrap: break-word;
+}
+
+/* =========================================
+   FOTO DAN IDENTITAS
+========================================= */
+
+.identitas {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.kolom-foto {
+    vertical-align: top;
+    padding-right: 15px;
+}
+
+.kolom-identitas {
+    vertical-align: top;
+    min-width: 0;
+}
+
+.foto-profil {
+    display: block;
+    width: 200px;
+    max-width: 100%;
+    height: auto;
+    border: 3px solid #00509e;
+    padding: 5px;
+}
+
+/* Tabel data identitas */
+table.data-identitas {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.data-identitas td {
+    padding: 7px 5px;
+    font-size: 14px;
+    line-height: 1.5;
+    vertical-align: top;
+    text-align: left;
+    overflow-wrap: break-word;
+}
+
+/* Kolom label */
+.data-identitas td:first-child {
+    width: 40%;
+}
+
+/* Kolom titik dua */
+.data-identitas td:nth-child(2) {
+    width: 18px;
+    text-align: center;
+}
+
+/* Kolom isi */
+.data-identitas td:nth-child(3) {
+    width: auto;
+    overflow-wrap: anywhere;
+}
+
+/* =========================================
+   DAFTAR
+========================================= */
 
 ul,
 ol {
-	line-height: 1.8;
+    line-height: 1.8;
 }
 
-.tabel-mata-kuliah {
-	width: 100%;
-	border-collapse: collapse;
-	margin-top: 15px;
-	margin-bottom: 20px;
-}
-
-/*===================================================*/
-/*TABEL MATA KULIAH*/
-/*===================================================*/
+/* =========================================
+   TABEL MATA KULIAH
+========================================= */
 
 .tabel-mata-kuliah {
-	width: 100%;
-	border-collapse: collapse;
-	margin-top: 15px;
-	margin-bottom: 20px;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    margin-bottom: 20px;
 }
 
 .tabel-mata-kuliah th {
-	background-color: #00509e;
-	color: white;
-	padding: 10px;
-	border: 1px solid #cccccc;
+    background-color: #00509e;
+    color: white;
+    padding: 10px;
+    border: 1px solid #cccccc;
 }
 
 .tabel-mata-kuliah td {
-	padding: 10px;
-	border: 1px solid #cccccc;
+    padding: 10px;
+    border: 1px solid #cccccc;
 }
 
-/*==================link=====================*/
+/* =========================================
+   TAUTAN
+========================================= */
 
 a {
-	color: #0066cc;
-	text-decoration: none;
+    color: #0066cc;
+    text-decoration: none;
 }
 
 a:hover {
-	color: red;
-	text-decoration: underline;
+    color: red;
+    text-decoration: underline;
 }
 
-
-/*===================================================*/
-/*FORM*/
-/*===================================================*/
+/* =========================================
+   FORMULIR KONTAK
+========================================= */
 
 form {
-	background-color: #fff7fa;
-	padding: 25px;
-	margin-top: 20px;
-	border: 1px solid #f1c6d2;
+    background-color: #fff7fa;
+    padding: 25px;
+    margin-top: 20px;
+    border: 1px solid #f1c6d2;
 }
-/* Label form */
+
 label {
-	display: block;
-	font-weight:  bold;
-	margin-bottom:  5px;
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
 }
-/* Input, Select dan Textare*/
+
 input,
 select,
 textarea {
-	width: 100%;
-	padding: 10px;
-	border: 1px solid #cccccc;
-	box-sizing: border-box;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    margin-bottom: 12px;
 }
+
 textarea {
-	resize: vertical;
+    resize: vertical;
+    min-height: 100px;
 }
-/* ====================BUTTON============================*/
+
 button {
-	background-color: #00509e;
-	color: white;
-	padding: 10px 20px;
-	border: none;
-	margin-right: 10px;
-	cursor: pointer;
+    background-color: #00509e;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    margin-right: 10px;
+    cursor: pointer;
 }
+
 button:hover {
-	background-color: #003366;
+    background-color: #003366;
 }
-/* ====================FOOTER============================*/
-.footer {
-	text-align: center;
-	color: #666666;
-	margin-top: 30px;
-}
+
+/* =========================================
+   KARTU INFORMASI
+========================================= */
+
 .grid-informasi {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: 15px;
-	margin-top: 25px;
-	margin-bottom: 25px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
+
 .card {
-	background-color: cadetblue;
-	padding: 20px;
-	border: 1px solid #dddddd;
+    background-color: cadetblue;
+    padding: 20px;
+    border: 1px solid #dddddd;
+    min-width: 0;
+    overflow-wrap: break-word;
 }
-/*==================================================*/
-/*RESPONSIF TABLET DAN HP*/
-/*===================================================*/
-@media (max-width: 768px) {
-	/* CONTAINER */
-	.container: {
-		width: 94%;
-		margin: 10px auto;
-		padding: 15px;
-	}
-	/*HEADING*/
-	h1 {font-size: 24px}
-	h2 {font-size: 19px}
-	p {font-size: 14px;line-height: 1.6}
 
-	/*FOTO DAN IDENTITAS*/
-	.identitas > tbody > tr {
-		display: flex;
-		flex-direction: column;
-	}
-	.kolom-foto h2{
-		margin-top: 0;
-		text-align: center;
-		margin-bottom: 20px;
-	}
-	.kolom-identitas {
-		width: 100%;
-		padding-right: 0;
-	}
-	.kolom-identitas h2{
-		margin-top: 0;
-		text-align: center;
-	}
-	.foto-profil {
-		width: 130px;
-	}
-	/*DATA IDENTITAS*/
-	.data-identitas td {
-		padding: 4px 2px;
-		font-size: 13px;
-		vertical-align: top;
-	}
-	/*GRID INFORMASI*/
-	.grid-informasi {
-		grid-template-columns: 1fr;
-		gap: 15px;}
-	.card {
-	width: 100%;
-	padding: 15px;}
-	.tabel mata-kuliah { font-size:12px;}
-	form {padding: 15px}
+.footer {
+    text-align: center;
+    color: #666666;
+    margin-top: 30px;
+}
 
-	input,
-	select,
-	textarea {font-size: 14px}
+/* =========================================
+   TABLET DAN HP
+========================================= */
 
-	button {
-		width: 100%;
-		margin-right: 0;
-		margin-bottom: 10px;
-	}
+@media screen and (max-width: 768px) {
+
+    .container {
+        width: 94%;
+        margin: 12px auto;
+        padding: 18px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 19px;
+    }
+
+    p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    /* Foto dan identitas tersusun ke bawah */
+    .identitas {
+        width: 100%;
+    }
+
+    .identitas > tbody > tr {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .kolom-foto,
+    .kolom-identitas {
+        display: block;
+        width: 100%;
+        padding: 0;
+    }
+
+    .kolom-foto h2,
+    .kolom-identitas h2 {
+        text-align: center;
+    }
+
+    .kolom-foto h2 {
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+
+    .kolom-identitas h2 {
+        margin-top: 20px;
+    }
+
+    .foto-profil {
+        width: 130px;
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    /* Identitas tetap sejajar dalam tiga kolom */
+    table.data-identitas {
+        width: 100%;
+        table-layout: fixed;
+    }
+
+    .data-identitas td {
+        padding: 7px 3px;
+        font-size: 13px;
+        line-height: 1.5;
+        vertical-align: top;
+    }
+
+    .data-identitas td:first-child {
+        width: 42%;
+    }
+
+    .data-identitas td:nth-child(2) {
+        width: 16px;
+        text-align: center;
+    }
+
+    .data-identitas td:nth-child(3) {
+        width: auto;
+        overflow-wrap: anywhere;
+    }
+
+    /* Kartu menjadi satu kolom */
+    .grid-informasi {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 15px;
+    }
+
+    .card {
+        width: 100%;
+        padding: 15px;
+    }
+
+    /* Tabel mata kuliah dapat digeser bila lebar */
+    .tabel-mata-kuliah {
+        font-size: 12px;
+    }
+
+    .tabel-mata-kuliah th,
+    .tabel-mata-kuliah td {
+        padding: 6px;
+    }
+
+    form {
+        padding: 15px;
+    }
+
+    input,
+    select,
+    textarea {
+        font-size: 16px;
+    }
+
+    button {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+/* =========================================
+   HP KECIL
+========================================= */
+
+@media screen and (max-width: 380px) {
+
+    .container {
+        width: 96%;
+        padding: 12px;
+    }
+
+    .data-identitas td {
+        padding: 6px 2px;
+        font-size: 12px;
+    }
+
+    .data-identitas td:first-child {
+        width: 43%;
+    }
+
+    .data-identitas td:nth-child(2) {
+        width: 14px;
+    }
+
+    h1 {
+        font-size: 21px;
+    }
 }
