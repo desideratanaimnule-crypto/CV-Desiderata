@@ -1,4 +1,5 @@
-```javascript
+
+<script>
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("formkontak");
 
@@ -9,11 +10,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const nomorWhatsApp = "6281353611102";
 
-        const nama = form.querySelector('[name="nama"]').value.trim();
-        const email = form.querySelector('[name="email"]').value.trim();
-        const telepon = form.querySelector('[name="telepon"]').value.trim();
-        const minat = form.querySelector('[name="minat"]').value;
-        const pesan = form.querySelector('[name="pesan"]').value.trim();
+        const nama = document.getElementById("nama").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const telepon = document.getElementById("telepon").value.trim();
+        const minat = document.getElementById("minat").value;
+        const pesan = document.getElementById("pesan").value.trim();
 
         if (!nama || !email || !telepon || !minat || !pesan) {
             alert("Silakan lengkapi semua kolom formulir.");
@@ -29,11 +30,14 @@ document.addEventListener("DOMContentLoaded", function () {
             "Pesan: " + pesan;
 
         const urlWhatsApp =
-            "https://wa.me/" +
-            nomorWhatsApp +
-            "?text=" +
-            encodeURIComponent(isiPesan);
+            "https://wa.me/" + nomorWhatsApp +
+            "?text=" + encodeURIComponent(isiPesan);
 
+        // Komputer dapat membuka WhatsApp Web.
+        // HP dapat meneruskan tautan ke aplikasi WhatsApp.
         window.open(urlWhatsApp, "_blank");
     });
 });
+</script>
+</body>
+</html>
