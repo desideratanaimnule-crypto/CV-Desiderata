@@ -29,11 +29,11 @@ document.addEventListener("DOMContentLoaded", function () {
             "Pesan: " + pesan;
 
         const urlWhatsApp =
-    "https://wa.me/" +
-    nomorWhatsApp +
-    "?text=" +
-    encodeURIComponent(isiPesan);
+            "https://wa.me/" +
+            nomorWhatsApp +
+            "?text=" +
+            encodeURIComponent(isiPesan);
 
-window.open(urlWhatsApp, "_blank");
-   });
+        window.open(urlWhatsApp, "_blank");
+    });
 });
