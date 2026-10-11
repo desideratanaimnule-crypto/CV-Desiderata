@@ -1,81 +1,54 @@
+/* ===== TABEL IDENTITAS CV RESPONSIF ===== */
 
-/* ===== PERBAIKAN FORM KONTAK AGAR RAPI DI HP ===== */
-
-#formkontak {
+table {
     width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
+    border-collapse: collapse;
+    table-layout: fixed;
 }
 
-#formkontak label {
-    display: block;
-    margin: 12px 0 6px;
-    font-weight: bold;
+table td,
+table th {
+    padding: 8px;
     text-align: left;
+    vertical-align: top;
+    overflow-wrap: break-word;
 }
 
-#formkontak input,
-#formkontak select,
-#formkontak textarea {
-    display: block;
-    width: 100%;
-    max-width: 100%;
-    padding: 10px;
-    margin: 0;
-    box-sizing: border-box;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
+/* Kolom label identitas */
+table td:first-child {
+    width: 35%;
 }
 
-#formkontak textarea {
-    min-height: 110px;
-    resize: vertical;
+/* Kolom titik dua */
+table td:nth-child(2) {
+    width: 5%;
+    text-align: center;
 }
 
-#formkontak button,
-#formkontak input[type="submit"] {
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
-    margin-top: 15px;
-    padding: 12px;
-    cursor: pointer;
+/* Kolom isi identitas */
+table td:nth-child(3) {
+    width: 60%;
 }
 
-/* Tampilan di HP */
+/* Tampilan khusus HP */
 @media screen and (max-width: 600px) {
-    .container {
-        width: 100%;
-        max-width: 100%;
-        padding: 15px;
-        box-sizing: border-box;
+    table td,
+    table th {
+        padding: 6px 4px;
+        font-size: 13px;
+        line-height: 1.5;
     }
 
-    #formkontak {
-        width: 100%;
+    table td:first-child {
+        width: 38%;
     }
 
-    #formkontak input,
-    #formkontak select,
-    #formkontak textarea {
-        font-size: 16px;
+    table td:nth-child(2) {
+        width: 4%;
     }
 
-    table {
-        width: 100%;
-        max-width: 100%;
-        table-layout: fixed;
-    }
-
-    td,
-    th {
+    table td:nth-child(3) {
+        width: 58%;
         overflow-wrap: anywhere;
-        word-break: normal;
-    }
-
-    img {
-        max-width: 100%;
-        height: auto;
     }
 }
