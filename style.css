@@ -1,54 +1,159 @@
-/* ===== TABEL IDENTITAS CV RESPONSIF ===== */
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    table-layout: fixed;
+body{
+	background-color: #800000;
+	font-family: Arial, sans-serif;
+	color: #000000;
+	margin: 0;
+	padding: 0;
 }
 
-table td,
-table th {
-    padding: 8px;
-    text-align: left;
-    vertical-align: top;
-    overflow-wrap: break-word;
+.container {
+	width: 80%;
+	margin: 30px auto;
+	padding: 30px;
+	background-color: white;
 }
 
-/* Kolom label identitas */
-table td:first-child {
-    width: 35%;
+h1 {
+	color: darkcyan;
+	text-align: left;
+	margin-bottom: 20px;
+}
+h2 {
+	color: darkred;
+	margin-top: 30px;
+	margin-bottom: 15px;
+}
+p {
+	font-size: 16px;
+	line-height: 1.7;
+	text-align: justify;
+}
+.identitas {
+	width: auto;
+}
+.kolom-foto {
+	vertical-align: top;
+	padding-right: 0px;
+	width: 220px;
+}
+.kolom-identitas {
+	vertical-align: top;
+	width: auto;
+}
+.foto-profil {
+	width: 200px;
+	border: 3px solid #00509e;
+	padding: 5px;
+}
+.data-identitas td {
+	padding: 5px;
 }
 
-/* Kolom titik dua */
-table td:nth-child(2) {
-    width: 5%;
-    text-align: center;
+/*===================================================*/
+/*LIST*/
+/*===================================================*/
+
+ul,
+ol {
+	line-height: 1.8;
 }
 
-/* Kolom isi identitas */
-table td:nth-child(3) {
-    width: 60%;
+.tabel-mata-kuliah {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 15px;
+	margin-bottom: 20px;
 }
 
-/* Tampilan khusus HP */
-@media screen and (max-width: 600px) {
-    table td,
-    table th {
-        padding: 6px 4px;
-        font-size: 13px;
-        line-height: 1.5;
-    }
+/*===================================================*/
+/*TABEL MATA KULIAH*/
+/*===================================================*/
 
-    table td:first-child {
-        width: 38%;
-    }
-
-    table td:nth-child(2) {
-        width: 4%;
-    }
-
-    table td:nth-child(3) {
-        width: 58%;
-        overflow-wrap: anywhere;
-    }
+.tabel-mata-kuliah {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 15px;
+	margin-bottom: 20px;
 }
+
+.tabel-mata-kuliah th {
+	background-color: #00509e;
+	color: white;
+	padding: 10px;
+	border: 1px solid #cccccc;
+}
+
+.tabel-mata-kuliah td {
+	padding: 10px;
+	border: 1px solid #cccccc;
+}
+
+/*==================link=====================*/
+
+a {
+	color: #0066cc;
+	text-decoration: none;
+}
+
+a:hover {
+	color: red;
+	text-decoration: underline;
+}
+
+
+/*===================================================*/
+/*FORM*/
+/*===================================================*/
+
+form {
+	background-color: #fff7fa;
+	padding: 25px;
+	margin-top: 20px;
+	border: 1px solid #f1c6d2;
+}
+/* Label form */
+label {
+	display: block;
+	font-weight:  bold;
+	margin-bottom:  5px;
+}
+/* Input, Select dan Textare*/
+input,
+select,
+textarea {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #cccccc;
+	box-sizing: border-box;
+}
+textarea {
+	resize: vertical;
+}
+/* ====================BUTTON============================*/
+button {
+	background-color: #00509e;
+	color: white;
+	padding: 10px 20px;
+	border: none;
+	margin-right: 10px;
+	cursor: pointer;
+}
+button :hover {
+	background-color: #003366;
+}
+/* ====================FOOTER============================*/
+.footer {
+	text-align: center;
+	color: #666666;
+	margin-top: 30px;
+}
+.grid-informasi {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 15px;
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+.card {
+	background-color: cadetblue;
+	padding: 20px;
