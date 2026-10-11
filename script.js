@@ -2,14 +2,12 @@
 <script>
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("formkontak");
-
     if (!form) return;
 
     form.addEventListener("submit", function (event) {
         event.preventDefault();
 
         const nomorWhatsApp = "6281353611102";
-
         const nama = document.getElementById("nama").value.trim();
         const email = document.getElementById("email").value.trim();
         const telepon = document.getElementById("telepon").value.trim();
@@ -29,13 +27,22 @@ document.addEventListener("DOMContentLoaded", function () {
             "Bidang Minat: " + minat + "\n" +
             "Pesan: " + pesan;
 
-        const urlWhatsApp =
-            "https://wa.me/" + nomorWhatsApp +
-            "?text=" + encodeURIComponent(isiPesan);
+        const teks = encodeURIComponent(isiPesan);
+        const isHP = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
 
-        // Komputer dapat membuka WhatsApp Web.
-        // HP dapat meneruskan tautan ke aplikasi WhatsApp.
-        window.open(urlWhatsApp, "_blank");
+        if (isHP) {
+            // Mencoba membuka aplikasi WhatsApp di HP
+            window.location.href =
+                "whatsapp://send?phone=" + nomorWhatsApp +
+                "&text=" + teks;
+        } else {
+            // Membuka WhatsApp Web di komputer
+            window.open(
+                "https://web.whatsapp.com/send?phone=" +
+                nomorWhatsApp + "&text=" + teks,
+                "_blank"
+            );
+        }
     });
 });
 </script>
