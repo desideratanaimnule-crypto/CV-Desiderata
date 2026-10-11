@@ -1,36 +1,40 @@
-const form = document.getElementById('formkontak');
-form.addEventListener("submit", function (event) {
-	// Mencegah form berpindah ke halaman lain
-	event.preventDevault();
+```javascript
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("formkontak");
 
-	//=====NOMOR WHATSAPP TUJUAN=====================
-	const nomorWhatsApp = "6281353611102";
+    if (!form) return;
 
-	//================MENGAMBIL DATA DARI FORM==============/
-	const nama = document.getElementById("nama").value;
-    const email = document.getElementById("email").value;
-    const telepon = document.getElementById("telepon").value;
-    const minat = document.getElementById("minat").value;
-    const pesan = document.getElementById("pesan").value;
-	//===================MEMBUAT ISI PESAN WHATSAPP=================
-	const isiPesan = `Halo, saya menghubungi melalui website CV.
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
 
-Nama Lengkap : ${nama}
-Email        : ${email}
-No. Telepon  : ${telepon}
-Bidang Minat : ${minat}
-Pesan        : ${pesan}`;
-	//====================MENGUBAH PESAN MENJADI FORMAT URL=============
-	const pesanEncoded =
-		encodeURIComponent(isiPesan);
+        const nomorWhatsApp = "6281353611102";
 
-	//====================MEMBUAT LINK WHATSAPP=======================
-	const urlWhatsApp =
-         `https://wa.me/${nomorWhatsApp}?text=${pesanEncoded}`;
+        const nama = form.querySelector('[name="nama"]').value.trim();
+        const email = form.querySelector('[name="email"]').value.trim();
+        const telepon = form.querySelector('[name="telepon"]').value.trim();
+        const minat = form.querySelector('[name="minat"]').value;
+        const pesan = form.querySelector('[name="pesan"]').value.trim();
 
-		//================MEMBUKA WHATSAPP========================
-		
+        if (!nama || !email || !telepon || !minat || !pesan) {
+            alert("Silakan lengkapi semua kolom formulir.");
+            return;
+        }
 
+        const isiPesan =
+            "Halo, saya menghubungi melalui website CV.\n\n" +
+            "Nama Lengkap: " + nama + "\n" +
+            "Email: " + email + "\n" +
+            "No. Telepon: " + telepon + "\n" +
+            "Bidang Minat: " + minat + "\n" +
+            "Pesan: " + pesan;
+
+        const urlWhatsApp =
+            "https://api.whatsapp.com/send?phone=" +
+            nomorWhatsApp +
+            "&text=" +
+            encodeURIComponent(isiPesan);
+
+        window.location.href = urlWhatsApp;
+    });
 });
-
-
+```
