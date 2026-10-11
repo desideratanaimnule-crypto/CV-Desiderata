@@ -29,12 +29,9 @@ document.addEventListener("DOMContentLoaded", function () {
             "Pesan: " + pesan;
 
         const urlWhatsApp =
-            "https://api.whatsapp.com/send?phone=" +
-            nomorWhatsApp +
-            "&text=" +
-            encodeURIComponent(isiPesan);
+    "https://wa.me/" +
+    nomorWhatsApp +
+    "?text=" +
+    encodeURIComponent(isiPesan);
 
-        window.location.href = urlWhatsApp;
-    });
-});
-```
+window.open(urlWhatsApp, "_blank");
