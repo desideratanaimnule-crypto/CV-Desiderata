@@ -1,225 +1,81 @@
-* {
-	box-sizing: border-box;
+
+/* ===== PERBAIKAN FORM KONTAK AGAR RAPI DI HP ===== */
+
+#formkontak {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
-body{
-	background-color: #6B1E2B;
-	font-family: Arial, sans-serif;
-	color: #000000;
-	margin: 0;
-	padding: 0;
+#formkontak label {
+    display: block;
+    margin: 12px 0 6px;
+    font-weight: bold;
+    text-align: left;
 }
 
-.container {
-	width: 80%;
-	margin: 30px auto;
-	padding: 30px;
-	background-color: white;
+#formkontak input,
+#formkontak select,
+#formkontak textarea {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
 }
 
-h1 {
-	color: darkcyan;
-	text-align: left;
-	margin-bottom: 20px;
-}
-h2 {
-	color: darkred;
-	margin-top: 30px;
-	margin-bottom: 15px;
-}
-p {
-	font-size: 16px;
-	line-height: 1.7;
-	text-align: justify;
-}
-.identitas {
-	width: auto;
-}
-.kolom-foto {
-	vertical-align: top;
-	padding-right: 0px;
-}
-.kolom-identitas {
-	vertical-align: top;
-}
-.foto-profil {
-	width: 200px;
-	border: 3px solid #00509e;
-	padding: 5px;
-}
-.data-identitas td {
-	padding: 5px;
+#formkontak textarea {
+    min-height: 110px;
+    resize: vertical;
 }
 
-/*===================================================*/
-/*LIST*/
-/*===================================================*/
-
-ul,
-ol {
-	line-height: 1.8;
+#formkontak button,
+#formkontak input[type="submit"] {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin-top: 15px;
+    padding: 12px;
+    cursor: pointer;
 }
 
-.tabel-mata-kuliah {
-	width: 100%;
-	border-collapse: collapse;
-	margin-top: 15px;
-	margin-bottom: 20px;
-}
+/* Tampilan di HP */
+@media screen and (max-width: 600px) {
+    .container {
+        width: 100%;
+        max-width: 100%;
+        padding: 15px;
+        box-sizing: border-box;
+    }
 
-/*===================================================*/
-/*TABEL MATA KULIAH*/
-/*===================================================*/
+    #formkontak {
+        width: 100%;
+    }
 
-.tabel-mata-kuliah {
-	width: 100%;
-	border-collapse: collapse;
-	margin-top: 15px;
-	margin-bottom: 20px;
-}
+    #formkontak input,
+    #formkontak select,
+    #formkontak textarea {
+        font-size: 16px;
+    }
 
-.tabel-mata-kuliah th {
-	background-color: #00509e;
-	color: white;
-	padding: 10px;
-	border: 1px solid #cccccc;
-}
+    table {
+        width: 100%;
+        max-width: 100%;
+        table-layout: fixed;
+    }
 
-.tabel-mata-kuliah td {
-	padding: 10px;
-	border: 1px solid #cccccc;
-}
+    td,
+    th {
+        overflow-wrap: anywhere;
+        word-break: normal;
+    }
 
-/*==================link=====================*/
-
-a {
-	color: #0066cc;
-	text-decoration: none;
-}
-
-a:hover {
-	color: red;
-	text-decoration: underline;
-}
-
-
-/*===================================================*/
-/*FORM*/
-/*===================================================*/
-
-form {
-	background-color: #fff7fa;
-	padding: 25px;
-	margin-top: 20px;
-	border: 1px solid #f1c6d2;
-}
-/* Label form */
-label {
-	display: block;
-	font-weight:  bold;
-	margin-bottom:  5px;
-}
-/* Input, Select dan Textare*/
-input,
-select,
-textarea {
-	width: 100%;
-	padding: 10px;
-	border: 1px solid #cccccc;
-	box-sizing: border-box;
-}
-textarea {
-	resize: vertical;
-}
-/* ====================BUTTON============================*/
-button {
-	background-color: #00509e;
-	color: white;
-	padding: 10px 20px;
-	border: none;
-	margin-right: 10px;
-	cursor: pointer;
-}
-button:hover {
-	background-color: #003366;
-}
-/* ====================FOOTER============================*/
-.footer {
-	text-align: center;
-	color: #666666;
-	margin-top: 30px;
-}
-.grid-informasi {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: 15px;
-	margin-top: 25px;
-	margin-bottom: 25px;
-}
-.card {
-	background-color: cadetblue;
-	padding: 20px;
-	border: 1px solid #dddddd;
-}
-/*==================================================*/
-/*RESPONSIF TABLET DAN HP*/
-/*===================================================*/
-@media (max-width: 768px) {
-	/* CONTAINER */
-	.container: {
-		width: 94%;
-		margin: 10px auto;
-		padding: 15px;
-	}
-	/*HEADING*/
-	h1 {font-size: 24px}
-	h2 {font-size: 19px}
-	p {font-size: 14px;line-height: 1.6}
-
-	/*FOTO DAN IDENTITAS*/
-	.identitas > tbody > tr {
-		display: flex;
-		flex-direction: column;
-	}
-	.kolom-foto h2{
-		margin-top: 0;
-		text-align: center;
-		margin-bottom: 20px;
-	}
-	.kolom-identitas {
-		width: 100%;
-		padding-right: 0;
-	}
-	.kolom-identitas h2{
-		margin-top: 0;
-		text-align: center;
-	}
-	.foto-profil {
-		width: 130px;
-	}
-	/*DATA IDENTITAS*/
-	.data-identitas td {
-		padding: 4px 2px;
-		font-size: 13px;
-		vertical-align: top;
-	}
-	/*GRID INFORMASI*/
-	.grid-informasi {
-		grid-template-columns: 1fr;
-		gap: 15px;}
-	.card {
-	width: 100%;
-	padding: 15px;}
-	.tabel mata-kuliah { font-size:12px;}
-	form {padding: 15px}
-
-	input,
-	select,
-	textarea {font-size: 14px}
-
-	button {
-		width: 100%;
-		margin-right: 0;
-		margin-bottom: 10px;
-	}
+    img {
+        max-width: 100%;
+        height: auto;
+    }
 }
