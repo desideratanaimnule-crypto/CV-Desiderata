@@ -35,3 +35,5 @@ document.addEventListener("DOMContentLoaded", function () {
     encodeURIComponent(isiPesan);
 
 window.open(urlWhatsApp, "_blank");
+   });
+});
