@@ -1,326 +1,341 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <title>CURRICULUM VITAE</title>
-    <link rel="stylesheet" href="style.css">
-</head>
 
-<body>
-
-<div class="container">
-
-	<h1>CURRICULUM VITAE (CV)</h1>
-	<hr>
-
-	<!-- ================= IDENTITAS ================= -->
-	<table class="identitas">
-		<tr>
-			<td class="kolom-foto">
-				<img src="images/foto.jpeg" alt="Foto Profil" class="foto-profil" width="180">
-			</td>
-
-			<td class="kolom-identitas">
-				<h2>Identitas Diri</h2>
-
-				<table class="data-identitas">
-
-					<tr>
-						<td><strong>Nama Lengkap<strong><td>
-						<td>:</td>
-						<td>Desiderata Naimnule</td>
-					</tr>
-
-					<tr>
-						<td><strong>NPM</strong></td>
-						<td>:</td>
-						<td>51250012</td>
-					</tr>
-
-					<tr>
-						<td><strong>Program Studi</strong></td>
-						<td>:</td>
-						<td>Teknologi Informasi</td>
-					</tr>
-
-					<tr>
-						<td><strong>Tempat, Tanggal Lahir</strong></td>
-						<td>:</td>
-						<td>Obe, 03 Desember 2005</td>
-					</tr>
-
-					<tr>
-						<td><strong>Alamat</strong></td>
-						<td>:</td>
-						<td>Kefamenanu</td>
-					</tr>
-
-					<tr>
-						<td><strong>No. HP</strong></td>
-						<td>:</td>
-						<td>6281363611102</td>
-					</tr>
-
-				</table>
-			</td>
-		</tr>
-	</table>
-
-	<hr>
-
-
-	<!-- ================= PROFIL ================= -->
-	<h2>Profil Singkat</h2>
-
-	<p>
-		Saya adalah mahasiswa program studi 
-		<strong>Teknologi Informasi Universitas Timor</strong>.
-		Saya memiliki ketertarikan terhadap perkembangan teknologi,
-		khususnya dalam bidang <mark>Web Development</mark>.
-		Saya memiliki motivasi untuk terus belajar dan mengembangkan
-		kemampuan dalam bidang teknologi informasi agar dapat memberikan
-		manfaat bagi masyarakat.
-	</p>
-
-
-	<!-- ================= INFORMASI ================= -->
-	<div class="grid-informasi">
-
-		<!-- RIWAYAT PENDIDIKAN -->
-		<div class="card">
-
-			<h2>Riwayat Pendidikan</h2>
-
-			<ol>
-				<li>SDK MAUBESI 2</li>
-				<li>SMPK ST. YOSEF MAUBESI</li>
-				<li>SMAN INSANA TENGAH</li>
-			</ol>
-
-		</div>
-
-
-		<!-- HOBI -->
-		<div class="card">
-
-			<h2>Hobi</h2>
-
-			<ul>
-				<li>Mendengarkan Musik</li>
-				<li>Scroll Media Sosial</li>
-			</ul>
-
-		</div>
-
-
-		<!-- BIDANG MINAT -->
-		<div class="card">
-
-			<h2>Bidang Minat</h2>
-
-			<ul>
-				<li>Web Development</li>
-			</ul>
-
-		</div>
-
-	</div>
-
-
-	<!-- ================= PENJELASAN MINAT ================= -->
-	<p>
-		Bidang yang paling saya minati adalah 
-		<strong><u>Web Development</u></strong>
-		karena saya ingin mampu membuat website yang menarik,
-		informatif, dan bermanfaat.
-	</p>
-
-	<hr>
-
-
-	<!-- ================= MATA KULIAH ================= -->
-	<h2>MK Semester Ini</h2>
-
-	<table class="tabel-mata-kuliah">
-
-		<tr>
-			<th>No.</th>
-			<th>Kode MK</th>
-			<th>Nama MK</th>
-			<th>SKS</th>
-		</tr>
-
-		<tr>
-			<td>1</td>
-			<td>TI201</td>
-			<td>Pemrograman Web Dasar</td>
-			<td>3</td>
-		</tr>
-
-		<tr>
-			<td>2</td>
-			<td>TI202</td>
-			<td>Basis Data</td>
-			<td>3</td>
-		</tr>
-
-		<tr>
-			<td>3</td>
-			<td>TI203</td>
-			<td>Organisasi dan Arsitektur Komputer</td>
-			<td>3</td>
-		</tr>
-
-	</table>
-
-
-	<hr>
-
-
-	<!-- ================= TARGET ================= -->
-	<h2>Target dan Cita-cita</h2>
-
-	<p>
-		Target saya selama menempuh pendidikan di program studi
-		Teknologi Informasi adalah meningkatkan kemampuan dalam
-		<em>pemrograman dan pengembangan teknologi</em>.
-		Saya berharap bisa menjadi seorang
-		<strong>Web Developer</strong> yang mampu menghasilkan
-		aplikasi web yang bermanfaat bagi masyarakat.
-	</p>
-
-
-	<!-- ================= LINK UNIVERSITAS ================= -->
-	<p>
-		Kunjungi website resmi 
-		<a href="https://unimor.ac.id" target="_blank">
-			Universitas Timor
-		</a>
-	</p>
-
-
-	<hr>
-
-
-	<!-- ================= FORM KONTAK ================= -->
-	<h2>Form Kontak</h2>
-
-	<p>
-		Silahkan mengisi form berikut jika ingin menghubungi saya.
-	</p>
-
-
-	<form id="formkontak">
-
-		<!-- NAMA -->
-		<div class="form-group">
-
-			<label for="nama">Nama Lengkap</label>
-
-			<input 
-				type="text" 
-				id="nama" 
-				name="nama" 
-				placeholder="Masukkan nama lengkap Anda"
-				required>
-
-		</div>
-
-
-		<!-- EMAIL -->
-		<div class="form-group">
-
-			<label for="email">Email</label>
-
-			<input 
-				type="email" 
-				id="email" 
-				name="email" 
-				placeholder="Masukkan email"
-				required>
-
-		</div>
-
-
-		<!-- NO TELEPON -->
-		<div class="form-group">
-
-			<label for="telepon">No. Telepon</label>
-
-			<input 
-				type="tel" 
-				id="telepon" 
-				name="telepon" 
-				placeholder="Masukkan nomor telepon Anda"
-				required>
-
-		</div>
-
-
-		<!-- BIDANG MINAT -->
-		<div class="form-group">
-
-			<label for="minat">Bidang Minat</label>
-
-			<select 
-				name="minat" 
-				id="minat"
-				required>
-
-				<option value="">
-					Pilih bidang minat
-				</option>
-
-				<option value="Web Development">
-					Web Development
-				</option>
-
-				<option value="UI/UX Design">
-					UI/UX Design
-				</option>
-
-				<option value="Artificial Intelligence">
-					Artificial Intelligence
-				</option>
-
-				<option value="Data Analysis">
-					Data Analysis
-				</option>
-
-			</select>
-
-		</div>
-
-
-		<!-- PESAN -->
-		<div class="form-group">
-
-			<label for="pesan">Pesan</label>
-
-			<textarea 
-				name="pesan" 
-				id="pesan" 
-				rows="5" 
-				placeholder="Tuliskan pesan Anda"
-				required></textarea>
-
-		</div>
-
-
-		<!-- TOMBOL -->
-		<button type="submit">
-			Kirim Pesan Ke WhatsApp
-		</button>
-
-		<button type="reset">
-			Reset
-		</button>
-
-	</form>
-
-</div>
-
-<script src="script.js" defer></script>
-
-</body>
-</html>
+/* ===== PENGATURAN DASAR ===== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #6B1E2B;
+    font-family: Arial, sans-serif;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: #ffffff;
+}
+
+/* ===== JUDUL DAN PARAGRAF ===== */
+h1 {
+    color: darkcyan;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: darkred;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.7;
+    text-align: justify;
+    overflow-wrap: break-word;
+}
+
+/* ===== FOTO DAN IDENTITAS ===== */
+.identitas {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.kolom-foto {
+    vertical-align: top;
+    padding-right: 15px;
+}
+
+.kolom-identitas {
+    vertical-align: top;
+    min-width: 0;
+}
+
+.foto-profil {
+    display: block;
+    width: 200px;
+    max-width: 100%;
+    height: auto;
+    border: 3px solid #00509e;
+    padding: 5px;
+}
+
+.data-identitas {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+}
+
+.data-identitas td {
+    padding: 5px;
+    text-align: left;
+    vertical-align: top;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.data-identitas td:first-child {
+    width: 40%;
+}
+
+.data-identitas td:nth-child(2) {
+    width: 18px;
+    text-align: center;
+}
+
+.data-identitas td:nth-child(3) {
+    overflow-wrap: anywhere;
+}
+
+/* ===== DAFTAR ===== */
+ul,
+ol {
+    line-height: 1.8;
+}
+
+/* ===== TABEL MATA KULIAH ===== */
+.tabel-mata-kuliah {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.tabel-mata-kuliah th {
+    background-color: #00509e;
+    color: white;
+    padding: 10px;
+    border: 1px solid #cccccc;
+}
+
+.tabel-mata-kuliah td {
+    padding: 10px;
+    border: 1px solid #cccccc;
+}
+
+/* ===== TAUTAN ===== */
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+/* ===== FORMULIR ===== */
+form {
+    background-color: #fff7fa;
+    padding: 25px;
+    margin-top: 20px;
+    border: 1px solid #f1c6d2;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input,
+select,
+textarea {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    background-color: #00509e;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #003366;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    text-align: center;
+    color: #666666;
+    margin-top: 30px;
+}
+
+/* ===== KARTU INFORMASI ===== */
+.grid-informasi {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.card {
+    background-color: cadetblue;
+    padding: 20px;
+    border: 1px solid #dddddd;
+    min-width: 0;
+    overflow-wrap: break-word;
+}
+
+/* ===== RESPONSIF TABLET DAN HP ===== */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 94%;
+        margin: 10px auto;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 19px;
+    }
+
+    p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    /* Foto di atas, identitas di bawah */
+    .identitas {
+        width: 100%;
+    }
+
+    .identitas > tbody > tr {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .kolom-foto,
+    .kolom-identitas {
+        display: block;
+        width: 100%;
+        padding: 0;
+    }
+
+    .kolom-foto h2,
+    .kolom-identitas h2 {
+        text-align: center;
+    }
+
+    .kolom-foto h2 {
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+
+    .kolom-identitas h2 {
+        margin-top: 20px;
+    }
+
+    .foto-profil {
+        width: 130px;
+        margin: 0 auto;
+    }
+
+    /* Identitas tetap sejajar */
+    .data-identitas {
+        width: 100%;
+        table-layout: fixed;
+    }
+
+    .data-identitas td {
+        padding: 5px 3px;
+        font-size: 13px;
+        vertical-align: top;
+    }
+
+    .data-identitas td:first-child {
+        width: 42%;
+    }
+
+    .data-identitas td:nth-child(2) {
+        width: 16px;
+    }
+
+    .data-identitas td:nth-child(3) {
+        overflow-wrap: anywhere;
+    }
+
+    /* Kartu menjadi satu kolom */
+    .grid-informasi {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .card {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .tabel-mata-kuliah {
+        font-size: 12px;
+    }
+
+    .tabel-mata-kuliah th,
+    .tabel-mata-kuliah td {
+        padding: 6px;
+    }
+
+    form {
+        padding: 15px;
+    }
+
+    input,
+    select,
+    textarea {
+        font-size: 16px;
+    }
+
+    button {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+/* ===== HP DENGAN LAYAR KECIL ===== */
+@media screen and (max-width: 380px) {
+    .container {
+        width: 96%;
+        padding: 12px;
+    }
+
+    .data-identitas td {
+        padding: 5px 2px;
+        font-size: 12px;
+    }
+
+    .data-identitas td:first-child {
+        width: 43%;
+    }
+
+    .data-identitas td:nth-child(2) {
+        width: 14px;
+    }
+
+    h1 {
+        font-size: 21px;
+    }
+}
