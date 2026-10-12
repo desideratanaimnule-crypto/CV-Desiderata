@@ -1,4 +1,4 @@
-
+```css
 /* ===== PENGATURAN DASAR ===== */
 * {
     box-sizing: border-box;
@@ -40,20 +40,23 @@ p {
     overflow-wrap: break-word;
 }
 
-/* ===== FOTO DAN IDENTITAS ===== */
+/* ===== FOTO DAN IDENTITAS DIRI ===== */
 .identitas {
     width: 100%;
     border-collapse: collapse;
+    table-layout: fixed;
 }
 
 .kolom-foto {
+    width: 220px;
     vertical-align: top;
-    padding-right: 15px;
+    padding: 10px 20px 10px 0;
 }
 
 .kolom-identitas {
+    width: auto;
     vertical-align: top;
-    min-width: 0;
+    padding: 10px 0;
 }
 
 .foto-profil {
@@ -68,28 +71,30 @@ p {
 .data-identitas {
     width: 100%;
     border-collapse: collapse;
-    table-layout: auto;
+    table-layout: fixed;
 }
 
 .data-identitas td {
-    padding: 5px;
-    text-align: left;
-    vertical-align: top;
+    padding: 6px 5px;
     font-size: 14px;
     line-height: 1.5;
+    text-align: left;
+    vertical-align: middle;
+    overflow-wrap: anywhere;
 }
 
 .data-identitas td:first-child {
-    width: 40%;
+    width: 38%;
+    font-weight: bold;
 }
 
 .data-identitas td:nth-child(2) {
-    width: 18px;
+    width: 20px;
     text-align: center;
 }
 
 .data-identitas td:nth-child(3) {
-    overflow-wrap: anywhere;
+    width: auto;
 }
 
 /* ===== DAFTAR ===== */
@@ -221,6 +226,7 @@ button:hover {
     /* Foto di atas, identitas di bawah */
     .identitas {
         width: 100%;
+        table-layout: auto;
     }
 
     .identitas > tbody > tr {
@@ -232,7 +238,7 @@ button:hover {
     .kolom-identitas {
         display: block;
         width: 100%;
-        padding: 0;
+        padding: 10px 0;
     }
 
     .kolom-foto h2,
@@ -246,7 +252,7 @@ button:hover {
     }
 
     .kolom-identitas h2 {
-        margin-top: 20px;
+        margin-top: 15px;
     }
 
     .foto-profil {
@@ -254,14 +260,14 @@ button:hover {
         margin: 0 auto;
     }
 
-    /* Identitas tetap sejajar */
+    /* Identitas sejajar dan tidak bertumpuk */
     .data-identitas {
         width: 100%;
         table-layout: fixed;
     }
 
     .data-identitas td {
-        padding: 5px 3px;
+        padding: 6px 3px;
         font-size: 13px;
         vertical-align: top;
     }
@@ -275,6 +281,7 @@ button:hover {
     }
 
     .data-identitas td:nth-child(3) {
+        width: auto;
         overflow-wrap: anywhere;
     }
 
@@ -289,6 +296,7 @@ button:hover {
         padding: 15px;
     }
 
+    /* Tabel mata kuliah */
     .tabel-mata-kuliah {
         font-size: 12px;
     }
@@ -298,6 +306,7 @@ button:hover {
         padding: 6px;
     }
 
+    /* Formulir */
     form {
         padding: 15px;
     }
@@ -338,4 +347,9 @@ button:hover {
     h1 {
         font-size: 21px;
     }
+
+    .foto-profil {
+        width: 120px;
+    }
 }
+```
